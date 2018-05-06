@@ -21,7 +21,7 @@ public class Jumpable : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>() as Rigidbody2D;
 	}
 	
-	void FixedUpdate () {
+	void Update () {
 		if(pc.Jump() && !jumping) {
 			rb.AddForce(new Vector2(
 				0,
