@@ -4,7 +4,8 @@ using UnityEngine;
 
 [
 	RequireComponent(typeof(PlayerController)),
-	RequireComponent(typeof(Rigidbody2D))
+	RequireComponent(typeof(Rigidbody2D)),
+	RequireComponent(typeof(Collider2D))
 ]
 public class Jumpable : MonoBehaviour {
 
@@ -21,13 +22,20 @@ public class Jumpable : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		
-		if(pc.Jump()) {
+		if(pc.Jump() && !jumping) {
 			rb.AddForce(new Vector2(
 				0,
 				1 * jumpMultiplier
 			));
 			jumping = true;
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D other){
+		Ground ground = other.gameObject.GetComponent<Ground>() as Ground;
+
+		if(ground != null) {
+			jumping = false;
 		}
 	}
 }

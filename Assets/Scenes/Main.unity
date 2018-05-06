@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8673f90f54863cd4584bc144390cb907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpMultiplier: 100
+  jumpMultiplier: 300
   jumping: 0
 --- !u!1 &47718633
 GameObject:
