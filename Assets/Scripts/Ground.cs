@@ -5,7 +5,8 @@ using UnityEngine;
 [
 	RequireComponent(typeof(Rigidbody2D)),
 	RequireComponent(typeof(BoxCollider2D)),
-	RequireComponent(typeof(SpriteRenderer))
+	RequireComponent(typeof(SpriteRenderer)),
+	RequireComponent(typeof(Translatable))
 ]
 public class Ground : MonoBehaviour {
 
