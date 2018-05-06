@@ -55,6 +55,6 @@ public class Score : TextAbstract
         }
         
         score += (Time.deltaTime * multiplier);
-        text.text = "Score: " + Mathf.Floor(score) + (Debug.isDebugBuild ? "  Multiplier: " + multiplier : "");
+        text.text = "Score: " + Mathf.Floor(score) /*+ (Debug.isDebugBuild ? "  Multiplier: " + multiplier : "")*/;
     }
 }
