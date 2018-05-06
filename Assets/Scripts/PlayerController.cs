@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 
 	private Rigidbody2D rb;
 
+
 	// Use this for initialization
 	void Start () {
 		rb = this.GetComponent<Rigidbody2D>() as Rigidbody2D;
@@ -47,5 +48,13 @@ public class PlayerController : MonoBehaviour {
 
 	public float Right(){
 		return active && Input.GetAxis("Horizontal")>0?Input.GetAxis("Horizontal"):0;
+	}
+
+	public bool Jump(){
+		return active && 
+			(
+				Input.GetKeyDown(KeyCode.Space) ||
+				Input.GetKeyDown(KeyCode.UpArrow) 
+			);
 	}
 }

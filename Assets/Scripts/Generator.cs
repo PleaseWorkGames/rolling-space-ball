@@ -10,6 +10,10 @@ public class Generator : MonoBehaviour {
 	public Ground ground;
 	public TranslatableValue translatableDistance;
 
+	public float maxGapDistance = 1.5f;
+
+	public float minGapDistance = 0.5f;
+
 	void OnTriggerExit2D(Collider2D other) {
 
 		// Create new ground
@@ -24,7 +28,7 @@ public class Generator : MonoBehaviour {
 
 		// Get the offset position for the new ground so there is no overlap
 		Collider2D ec = newGround.GetComponent<Collider2D>() as Collider2D;
-		float offset = ec.bounds.extents.x;
+		float offset = ec.bounds.extents.x + Random.Range(minGapDistance,maxGapDistance);
 
 		// Set new position of new ground
 		newGround.transform.localPosition = new Vector2(
