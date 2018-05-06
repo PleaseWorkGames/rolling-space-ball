@@ -31,6 +31,11 @@ public class Score : TextAbstract
         // TODO - ensure Multipliers array is ordered by fractionalPositionFromLeftOfScreen ascending 
         base.Start();
     }
+
+    public float getMultiplier()
+    {
+        return multiplier;
+    }
     
     void FixedUpdate()
     {
@@ -51,6 +56,10 @@ public class Score : TextAbstract
 
             if (isInMultiplierRange) {
                 multiplier = currentMultiplierConfigInstance.multiplier;
+                Dictionary<string, dynamic> parameters = new Dictionary<string, dynamic>();
+                parameters.Add("multiplier", multiplier);
+                
+                EventBus.trigger("multiplierChange", parameters);
             }
 
             previousMultiplierConfigFractionalPosition = currentMultiplierConfigInstance.fractionalPositionFromLeftOfScreen;
