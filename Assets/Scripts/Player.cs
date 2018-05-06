@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [
     RequireComponent(typeof(PlayerController))
@@ -8,4 +9,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	
+    void OnDestroy() {
+       World.reloadScene(); 
+    }
 }
