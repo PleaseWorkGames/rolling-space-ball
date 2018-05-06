@@ -875,7 +875,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4399555474290498, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.781
       objectReference: {fileID: 0}
     - target: {fileID: 4399555474290498, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -910,6 +910,10 @@ Prefab:
       propertyPath: translateDistance
       value: 
       objectReference: {fileID: 1856522627}
+    - target: {fileID: 4399555474290498, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 30.513245
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a, type: 2}
   m_IsPrefabParent: 0
@@ -1039,9 +1043,7 @@ EdgeCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.5, y: 0.5}
-  - {x: -0.5, y: -0.5}
+  m_Points: []
 --- !u!114 &2131556497
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -38,6 +38,12 @@ public class Destroyer : MonoBehaviour {
 		ec.isTrigger = true;
 	}
 	void OnTriggerExit2D(Collider2D other) {
-		Destroy(other.gameObject);
+
+		if(other.gameObject.GetComponent<Player>() != null ) {
+			World.reloadScene(); 
+		}
+		else {
+			Destroy(other.gameObject);
+		}
 	}
 }
