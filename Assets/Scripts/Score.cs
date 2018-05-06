@@ -56,12 +56,10 @@ public class Score : TextAbstract
 
             if (isInMultiplierRange) {
                 multiplier = currentMultiplierConfigInstance.multiplier;
-                /*
-                Dictionary<string, dynamic> parameters = new Dictionary<string, dynamic>();
-                parameters.Add("multiplier", multiplier);
                 
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("multiplier", multiplier);
                 EventBus.trigger("multiplierChange", parameters);
-                */
             }
 
             previousMultiplierConfigFractionalPosition = currentMultiplierConfigInstance.fractionalPositionFromLeftOfScreen;
