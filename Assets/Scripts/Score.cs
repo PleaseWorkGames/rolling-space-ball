@@ -13,6 +13,8 @@ public class Score : TextAbstract
     }
 
     public Multiplier[] Multipliers;
+
+    public bool showMultiplier = false;
     
     private float time = 0.0f;
 
@@ -55,6 +57,6 @@ public class Score : TextAbstract
         }
         
         score += (Time.deltaTime * multiplier);
-        text.text = "Score: " + Mathf.Floor(score) /*+ (Debug.isDebugBuild ? "  Multiplier: " + multiplier : "")*/;
+        text.text = "Score: " + Mathf.Floor(score) + (showMultiplier ? "  Multiplier: " + multiplier : "");
     }
 }
