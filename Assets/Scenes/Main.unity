@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 30591544}
   - component: {fileID: 30591543}
   - component: {fileID: 30591546}
+  - component: {fileID: 30591547}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Player
@@ -219,6 +220,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8482b8373195049098f6c180d79a06c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &30591547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 30591542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980dd0f9603cdc049aad6717ef1cbab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveScale: 1
+  floating: 1
 --- !u!1 &47718633
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +578,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0534374fe204345995ce175da54e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Multipliers: []
+  Multipliers:
+  - fractionalPositionFromLeftOfScreen: 0.2
+    multiplier: 1
+  - fractionalPositionFromLeftOfScreen: 0.4
+    multiplier: 2
+  - fractionalPositionFromLeftOfScreen: 0.6
+    multiplier: 3
+  - fractionalPositionFromLeftOfScreen: 0.8
+    multiplier: 4
+  - fractionalPositionFromLeftOfScreen: 1
+    multiplier: 5
+  showMultiplier: 1
   player: {fileID: 30591546}
 --- !u!1 &1856522625
 GameObject:
