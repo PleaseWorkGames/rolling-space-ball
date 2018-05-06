@@ -10,11 +10,15 @@ public class Music : MonoBehaviour
 	void Start ()
 	{
 		AudioSource audioClip = GetComponent<AudioSource>();
+		/*
 		EventBus.listenFor("multiplierChange", this.updatePitch);
+		*/
 	}
 	
+	/*
 	public void updatePitch([CanBeNull] Dictionary<string, dynamic> parameters)
 	{
 		audioClip.pitch = parameters["multiplier"];
 	}
+	*/
 }
