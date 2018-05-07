@@ -5,16 +5,25 @@ using UnityEngine;
 
 public class Music : MonoBehaviour
 {
- 	AudioSource audioClip;
+ 	private static AudioSource audioClip;
 	
-	void Start ()
+	private static bool loadedAlready = false;
+	
+	void Awake()
 	{
-		this.audioClip = GetComponent<AudioSource>() as AudioSource;
+		if (loadedAlready) {
+			return;
+		}
+		
+		audioClip = GetComponent<AudioSource>() as AudioSource;
+		DontDestroyOnLoad(audioClip);
 		EventBus.listenFor("multiplierChange", this.updatePitch);
+		
+		loadedAlready = true;
 	}
 	
 	public void updatePitch([CanBeNull] Dictionary<string, object> parameters)
 	{
-		audioClip.pitch = (float) parameters["multiplier"];
+		audioClip.pitch = (float) parameters["multiplier"] / 2;
 	}
 }
