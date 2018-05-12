@@ -153,7 +153,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &30591544
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1290,6 +1290,16 @@ Prefab:
     - target: {fileID: 4399555474290498, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a, type: 2}
       propertyPath: m_LocalScale.x
       value: 30.513245
+      objectReference: {fileID: 0}
+    - target: {fileID: 61157910542767546, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.012128264
+      objectReference: {fileID: 0}
+    - target: {fileID: 61157910542767546, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.9757435
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a, type: 2}

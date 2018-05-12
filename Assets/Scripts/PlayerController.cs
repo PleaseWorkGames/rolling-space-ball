@@ -19,10 +19,11 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = this.GetComponent<Rigidbody2D>() as Rigidbody2D;
-
+		
 		rb.isKinematic = floating;
 	}
 
+	// debug implementation to allow ball to move with any arrow key if floating is true
 	void FixedUpdate(){
 
 		if(floating) {
