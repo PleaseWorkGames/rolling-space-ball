@@ -51,10 +51,5 @@ public class SpaceMask : MonoBehaviour
 
 		// reset position on child text (TODO - there's gotta be a better way to do this)
 		text.transform.position = originalTextPosition;
-		
-		player.transform.localPosition = new Vector2(
-			player.transform.position.x - 0.01f,
-			player.transform.position.y
-		);
 	}
 }
