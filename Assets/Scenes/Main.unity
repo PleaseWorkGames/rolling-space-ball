@@ -616,6 +616,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8125f764a162f4762a91912cb77cb18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &816008278 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114333589035142288, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2083350617}
+  m_Script: {fileID: 11500000, guid: 2bd013c0a198a724fa640fa93f6ec001, type: 3}
 --- !u!1 &866519744
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,7 +791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 30591546}
-  camera: {fileID: 47718636}
+  gameCamera: {fileID: 47718636}
 --- !u!1 &1381491210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,7 +1449,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8853f42e843dc714fa0b21534ed4807b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ground: {fileID: 114333589035142288, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a, type: 2}
+  grounds:
+  - {fileID: 816008278}
+  - {fileID: 114325045840681792, guid: c5bd0a0259fff5d448110c5a7a064fed, type: 2}
   translatableDistance: {fileID: 1856522627}
   maxGapDistance: 1.5
   minGapDistance: 0.5
