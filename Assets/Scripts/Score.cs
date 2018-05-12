@@ -16,8 +16,6 @@ public class Score : TextAbstract
 
     public bool showMultiplier = false;
     
-    private float time = 0.0f;
-
     private float score = 0;
     
     private float defaultMultiplier = 1.0f;
