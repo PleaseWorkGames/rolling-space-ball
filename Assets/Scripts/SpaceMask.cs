@@ -14,14 +14,14 @@ public class SpaceMask : MonoBehaviour
 	private float originalOverlayMaskPositionX;
 
 	public Player player;
-	public Camera camera;
+	public Camera gameCamera;
 	
 	void Start ()
 	{
 		this.overlayMask = GetComponent<Mask>();
 		this.text = GetComponentInChildren<Text>();
 		
-		this.originalPlayerPositionX = camera.WorldToScreenPoint(this.player.transform.position).x;
+		this.originalPlayerPositionX = gameCamera.WorldToScreenPoint(this.player.transform.position).x;
 		this.originalOverlayMaskPositionX = this.overlayMask.transform.localPosition.x;
 		
 		this.screenWidth = Screen.width;
@@ -33,7 +33,7 @@ public class SpaceMask : MonoBehaviour
 	 */
 	void FixedUpdate ()
 	{
-		float currentPlayerPositionX = camera.WorldToScreenPoint(this.player.transform.position).x;
+		float currentPlayerPositionX = gameCamera.WorldToScreenPoint(this.player.transform.position).x;
 		float differencePlayerPositionX = this.originalPlayerPositionX - currentPlayerPositionX;
 
 		float overlayMaskPositionXDestination = this.originalOverlayMaskPositionX - differencePlayerPositionX * ((textWidth / 2) / screenWidth); // TODO - figure out why -10 is left side of stage for player and overlay mask  
