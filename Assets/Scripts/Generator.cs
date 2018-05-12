@@ -7,7 +7,8 @@ using UnityEngine;
 ]
 public class Generator : MonoBehaviour {
 
-	public Ground ground;
+	public Ground[] grounds;
+	
 	public TranslatableValue translatableDistance;
 
 	public float maxGapDistance = 1.5f;
@@ -39,7 +40,10 @@ public class Generator : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-
+		// choose random ground to instantiate
+		int randomIndex = Mathf.RoundToInt(Random.value * (grounds.Length - 1));
+		Ground ground = this.grounds[randomIndex];
+		
 		// Create new ground
 		Ground newGround = Instantiate(
 			ground, 
@@ -52,7 +56,7 @@ public class Generator : MonoBehaviour {
 
 		// Get the offset position for the new ground so there is no overlap
 		Collider2D ec = newGround.GetComponent<Collider2D>() as Collider2D;
-		float offset = ec.bounds.extents.x + Random.Range(minGapDistance,maxGapDistance);
+		float offset = ec.bounds.extents.x + Random.Range(minGapDistance, maxGapDistance);
 
 		// Set new position of new ground
 		newGround.transform.localPosition = new Vector2(
@@ -60,5 +64,4 @@ public class Generator : MonoBehaviour {
 			other.transform.position.y
 		);
 	}
-
 }
