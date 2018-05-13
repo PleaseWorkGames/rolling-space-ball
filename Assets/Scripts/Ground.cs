@@ -20,6 +20,18 @@ public class Ground : MonoBehaviour {
 
 		pc = GetComponent<PolygonCollider2D>() as PolygonCollider2D;
 
+		if(sr.drawMode != SpriteDrawMode.Simple) {
+			Vector2[] points = pc.points;
+
+			for(int i=0; i<points.Length;i++){
+				points[i] = new Vector2(
+					points[i].x * sr.size.x,
+					points[i].y * sr.size.y
+				);
+			}
+			
+			pc.points = points;
+		}
 	}
 	
 	// Update is called once per frame
