@@ -21,6 +21,11 @@ public class Music : MonoBehaviour
 		
 		loadedAlready = true;
 	}
+
+	public void start()
+	{
+		audioClip.pitch = (float) 3 / 2;
+	}
 	
 	public void updatePitch([CanBeNull] Dictionary<string, object> parameters)
 	{
