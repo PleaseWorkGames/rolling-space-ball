@@ -1742,6 +1742,7 @@ MonoBehaviour:
   grounds:
   - {fileID: 114333589035142288, guid: ce21e58468fd1471eb0d0c479e9048d1, type: 2}
   - {fileID: 114325045840681792, guid: c5bd0a0259fff5d448110c5a7a064fed, type: 2}
+  - {fileID: 114506272511341504, guid: f6f158d857656da4f957983e7fe55687, type: 2}
   translatableDistance: {fileID: 1856522627}
   maxGapDistance: 1.5
   minGapDistance: 0.8
