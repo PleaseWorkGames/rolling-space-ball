@@ -4,7 +4,7 @@ using UnityEngine;
 
 [
 	RequireComponent(typeof(Rigidbody2D)),
-	RequireComponent(typeof(BoxCollider2D)),
+	RequireComponent(typeof(PolygonCollider2D)),
 	RequireComponent(typeof(SpriteRenderer)),
 	RequireComponent(typeof(Translatable))
 ]

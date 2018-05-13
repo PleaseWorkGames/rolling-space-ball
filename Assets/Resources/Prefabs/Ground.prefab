@@ -19,11 +19,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4399555474290498}
-  - component: {fileID: 61157910542767546}
   - component: {fileID: 50769439845704266}
   - component: {fileID: 114333589035142288}
   - component: {fileID: 212426825319538732}
   - component: {fileID: 114664745764730384}
+  - component: {fileID: 60172711753862960}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61157910542767546
-BoxCollider2D:
+--- !u!60 &60172711753862960
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -86,9 +86,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: -0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: 0.5, y: 0.5}
+      - {x: 0.5, y: -0.5}
 --- !u!114 &114333589035142288
 MonoBehaviour:
   m_ObjectHideFlags: 1

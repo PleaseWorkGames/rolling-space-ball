@@ -19,11 +19,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4422157804744016}
-  - component: {fileID: 61641669801186204}
   - component: {fileID: 50803006521149274}
   - component: {fileID: 114325045840681792}
   - component: {fileID: 212069290112548740}
   - component: {fileID: 114620915903101058}
+  - component: {fileID: 60337962603515986}
   m_Layer: 0
   m_Name: Hill
   m_TagString: Untagged
@@ -64,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61641669801186204
-BoxCollider2D:
+--- !u!60 &60337962603515986
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -86,9 +86,11 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 0.5, y: 0.5}
 --- !u!114 &114325045840681792
 MonoBehaviour:
   m_ObjectHideFlags: 1
