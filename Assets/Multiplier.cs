@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Multiplier : TextAbstract {
+public class Multiplier : MonoBehaviour {
 
 	private static bool loadedAlready = false;
 	
+	private static Text text;
+
 	void Awake()
 	{
 		if (loadedAlready) {
@@ -17,10 +20,9 @@ public class Multiplier : TextAbstract {
 		loadedAlready = true;
 	}
 	
-	protected new void Start()
+	void Start()
 	{
-		base.Start();
-		DontDestroyOnLoad(text);
+		text = gameObject.GetComponent<Text>() as Text;
 	}
 
 	private void changeMultiplierText([CanBeNull] Dictionary<string, object> parameters)
