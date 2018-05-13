@@ -55,7 +55,12 @@ public class PlayerController : MonoBehaviour {
 		return active && 
 			(
 				Input.GetKeyDown(KeyCode.Space) ||
-				Input.GetKeyDown(KeyCode.UpArrow) 
+				Input.GetKeyDown(KeyCode.UpArrow) ||
+				Input.GetMouseButtonDown(0) ||
+				(
+					Input.touches.Length > 0 &&
+					Input.GetTouch(0).phase == TouchPhase.Began
+				)
 			);
 	}
 }
