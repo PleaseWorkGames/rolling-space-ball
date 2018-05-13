@@ -622,7 +622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 412.7, y: 330.65002}
+  m_AnchoredPosition: {x: 412.7, y: 288}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &488433849
@@ -1394,7 +1394,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4399555474290498, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.781
+      value: 5.54
       objectReference: {fileID: 0}
     - target: {fileID: 4399555474290498, guid: ed7d3a60bd54cf748ad66fd8eb4dc25a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1576,7 +1576,7 @@ MonoBehaviour:
   - {fileID: 114325045840681792, guid: c5bd0a0259fff5d448110c5a7a064fed, type: 2}
   translatableDistance: {fileID: 1856522627}
   maxGapDistance: 1.5
-  minGapDistance: 0.5
+  minGapDistance: 0.8
 --- !u!4 &2131556498
 Transform:
   m_ObjectHideFlags: 0
