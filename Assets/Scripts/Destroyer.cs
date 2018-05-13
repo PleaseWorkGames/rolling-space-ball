@@ -14,14 +14,14 @@ public class Destroyer : MonoBehaviour {
 
 		//Top left of screen
 		points[0] = Camera.main.ViewportToWorldPoint(new Vector3(
-			0,
+			-.01f,
 			1,
 			Camera.main.nearClipPlane
 		));
 
 		//Bottom left of screen
 		points[1] = Camera.main.ViewportToWorldPoint(new Vector3(
-			0,
+			-.01f,
 			0,
 			Camera.main.nearClipPlane
 		));
