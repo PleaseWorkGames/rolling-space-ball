@@ -10,9 +10,16 @@ using UnityEngine;
 ]
 public class Ground : MonoBehaviour {
 
+	private PolygonCollider2D pc;
+
 	// Use this for initialization
 	void Start () {
-		
+		SpriteRenderer sr = GetComponent<SpriteRenderer>() as SpriteRenderer;
+
+		Sprite sprite = sr.sprite;
+
+		pc = GetComponent<PolygonCollider2D>() as PolygonCollider2D;
+
 	}
 	
 	// Update is called once per frame
