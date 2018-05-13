@@ -24,7 +24,7 @@ public class Jumpable : MonoBehaviour {
 	void Update () {
 		if(pc.Jump() && !jumping) {
 			rb.AddForce(new Vector2(
-				0,
+				.15f * jumpMultiplier,
 				1 * jumpMultiplier
 			));
 			jumping = true;
