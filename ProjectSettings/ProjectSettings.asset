@@ -633,7 +633,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 3
+  apiCompatibilityLevel: 2
   cloudProjectId: 9a249f31-0196-4eef-aa06-2c1511f3db0a
   projectName: Rolling Space Jam Ball
   organizationId: unity_whdfmzay0ed2oa
