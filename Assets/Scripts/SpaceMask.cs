@@ -37,7 +37,6 @@ public class SpaceMask : MonoBehaviour
 		float differencePlayerPositionX = this.originalPlayerPositionX - currentPlayerPositionX;
 
 		float overlayMaskPositionXDestination = this.originalOverlayMaskPositionX - differencePlayerPositionX * ((textWidth / 2) / screenWidth); // TODO - figure out why -10 is left side of stage for player and overlay mask  
-		Debug.Log(overlayMaskPositionXDestination + "  " + differencePlayerPositionX);
 		
 		// move overlay mask to new position based on ball position.  this requires moving the mask and then moving the children back to original positions, since it moves both and I haven't looked into how to do this better
 		Vector3 originalTextPosition = text.transform.position;

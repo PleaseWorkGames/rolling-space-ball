@@ -14,6 +14,6 @@ public class Timer : TextAbstract {
 
 		float precisionModifier = Mathf.Pow(10, precision);
 		
-		text.text = "Time: " + Mathf.Round(time * precisionModifier) / precisionModifier;
+		text.text = /*"Time: " +*/ "" + Mathf.Round(time * precisionModifier) / precisionModifier;
 	}
 }

@@ -58,12 +58,13 @@ public class Score : TextAbstract
                 Dictionary<string, object> parameters = new Dictionary<string, object>();
                 parameters.Add("multiplier", multiplier);
                 EventBus.trigger("multiplierChange", parameters);
+                EventBus.trigger("multiplierChange2", parameters);
             }
 
             previousMultiplierConfigFractionalPosition = currentMultiplierConfigInstance.fractionalPositionFromLeftOfScreen;
         }
         
         score += (Time.deltaTime * multiplier);
-        text.text = "Score: " + Mathf.Floor(score) + (showMultiplier ? "  Multiplier: " + multiplier : "");
+        text.text = /*"Score: " +*/ Mathf.Floor(score) + "";// + (showMultiplier ? "  Multiplier: " + multiplier : "");
     }
 }
