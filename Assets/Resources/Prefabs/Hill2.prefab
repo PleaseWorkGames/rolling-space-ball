@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 60107035865172290}
   - component: {fileID: 50943515402484290}
   - component: {fileID: 114506272511341504}
-  - component: {fileID: 114016117530704330}
   m_Layer: 0
   m_Name: Hill2
   m_TagString: Untagged
@@ -96,19 +95,6 @@ PolygonCollider2D:
       - {x: -2.5, y: -0.27852422}
       - {x: 2.5, y: -0.66}
       - {x: 2.5, y: 0.71687263}
---- !u!114 &114016117530704330
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1226769117151040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc44e95df5724851917c5f0a4a0fb58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  translateDistance: {fileID: 0}
-  translateType: 0
 --- !u!114 &114407171700034830
 MonoBehaviour:
   m_ObjectHideFlags: 1
